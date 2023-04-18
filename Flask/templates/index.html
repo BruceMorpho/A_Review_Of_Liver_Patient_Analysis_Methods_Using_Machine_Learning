@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Liver Patient Analysis</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<style type="text/css">
+		body{
+			background-color: #ffcf0059;
+		}
+		.page-header{
+			background-color: blue;
+			width: 100%;
+			height: auto;
+			text-align: center;
+			padding-top: 5px;
+			color: #fff;
+		}
+		h1{
+			font-size: 40px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				 <div class="page-header">
+    				<h1>Liver Patient Prediction</h1>
+  				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<form action="/data_predict" method="POST">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="age">Age:</label>
+							    <input type="text" class="form-control" id="age" name="age">
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="gender">Gender:</label>
+							    <input type="text" class="form-control" id="gender" name="gender" placeholder="Enter 0 as male, 1 as female">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="tb">Total_Bilirubin:</label>
+							    <input type="text" class="form-control" id="tb" name="tb">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="db">Direct_Bilirubin:</label>
+							    <input type="text" class="form-control" id="db" name="db">
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="ap">Alkaline_Phosphotase:</label>
+							    <input type="text" class="form-control" id="ap" name="ap">
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="aa1">Alamine_Aminotransferase:</label>
+							    <input type="text" class="form-control" id="aa1" name="aa1">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="aa2">Aspartate_Aminotransferase:</label>
+							    <input type="text" class="form-control" id="aa2" name="aa2">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="tp">Total_Protiens:</label>
+							    <input type="text" class="form-control" id="tp" name="tp">
+							</div>
+						</div>
+					</div>
+
+					
+					
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="a">Albumin:</label>
+							    <input type="text" class="form-control" id="a" name="a">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+							    <label for="agr">Albumin_and_Globulin_Ratio:</label>
+							    <input type="text" class="form-control" id="agr" name="agr">
+							</div>
+						</div>
+					</div>
+				
+
+
+					<button type="submit" class="btn btn-default">Predict</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script
+</body>
+</html>
